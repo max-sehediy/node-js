@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(45deg, #ffeaa7, #6c5ce7);
+}
+div {
+    margin: 10px;
+    display: flex;
+}
+p {
+    width: 110px;
+    text-transform: capitalize;
+}
+button {
+    width: 100px;
+    margin: 0 10px;
+    padding: 10px;
+    text-transform: capitalize;
+    background-color: lightslategrey;
+}
+input {
+    margin-right: 10px;
+}
+input::placeholder {
+    font-size: 15px;
+    text-align: center;
+    text-transform: capitalize;
+}
