@@ -23,7 +23,7 @@ document.querySelector('#cost').onclick = function () {
     console.log(user)
     let first = +prompt('the cost of the first product ', '')
     let second = +prompt('the cost of the second product ', '')
-    if (user || first || second == 0) {
+    if (user == 0 || first == 0 || second == 0 || isNaN(second) || isNaN(second) || isNaN(second)) {
         return alert('інше');
     }
     let result = first + second
