@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music</title>
+    <style>
+        body {
+            width: 100%;
+        }
+
+        .carousel {
+            width: 100%;
+            text-align: center;
+        }
+
+        img {
+            margin: 20px auto;
+            width: 768px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <img src="" class="first-slider"></img>
+    </div>
+    <a href="./index.html">Home</a>
+    <a href="./coffee.html">Coffee</a>
+    <script>
+        let carousel = document.querySelector('.carousel'),
+            fSlider = carousel.firstElementChild,
+            arr1 = [
+                'https://akket.com/wp-content/uploads/2019/09/Apple-Music-Web-1.jpg',
+                'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ef/Google_Play_Music_icon_%282016%29.svg/1200px-Google_Play_Music_icon_%282016%29.svg.png',
+            ],
+            arrEl = 0;
+        fSlider.src = arr1[arrEl]
+
+        function showSlider() {
+            setInterval(() => {
+                next()
+            }, 1000);
+        };
+        function next() {
+            if (arrEl >= arr1.length) {
+                arrEl = 0
+                fSlider.src = arr1[arrEl]
+            } else {
+                fSlider.src = arr1[arrEl]
+            }
+            console.log(arrEl);
+            arrEl++
+        }
+        showSlider()
+
+    </script>
+</body>
+
+</html>

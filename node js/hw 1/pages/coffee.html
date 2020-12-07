@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee</title>
+    <style>
+        body {
+            width: 100%;
+        }
+
+        .carousel {
+            width: 100%;
+            text-align: center;
+        }
+
+        img {
+            margin: 20px auto;
+            width: 768px;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carousel">
+        <img src="" class="first-slider"></img>
+    </div>
+    <a href="./index.html">Home</a>
+    <a href="./music.html">Music</a>
+    <script>
+        let carousel = document.querySelector('.carousel'),
+            fSlider = carousel.firstElementChild,
+            arr1 = ['https://media3.s-nbcnews.com/j/newscms/2019_33/2203981/171026-better-coffee-boost-se-329p_67dfb6820f7d3898b5486975903c2e51.fit-1240w.jpg',
+                'https://images.immediate.co.uk/production/volatile/sites/30/2020/08/hub-image-coffee-e732616.jpg?quality=90&resize=504,458',
+                'https://image.freepik.com/free-photo/white-coffee-cup-and-roasted-coffee-beans-around_35570-794.jpg',
+                'https://see.news/wp-content/uploads/2020/10/coffee.jpeg'],
+            arrEl = 0;
+        fSlider.src = arr1[arrEl]
+
+        function showSlider() {
+            setInterval(() => {
+                next()
+            }, 1000);
+        };
+        function next() {
+            if (arrEl >= arr1.length) {
+                arrEl = 0
+                fSlider.src = arr1[arrEl]
+            } else {
+                fSlider.src = arr1[arrEl]
+            }
+            console.log(arrEl);
+            arrEl++
+        }
+        showSlider()
+
+    </script>
+</body>
+
+</html>

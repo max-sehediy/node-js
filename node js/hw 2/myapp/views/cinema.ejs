@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/stylesheets/cards_style.css">
+    <style>
+        .item {
+            width: 400px;
+            overflow: hidden;
+        }
+
+        .header-image {
+            width: 350px;
+        }
+
+        .title {
+            padding: 15px;
+            text-transform: uppercase;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+        }
+
+        p {
+            margin-left: 10px;
+        }
+        h1{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <%- include("partials/menu.ejs") %>
+    <h1> Cinema: <%= arr.id %></h1>
+    </div>
+    <div class="item">
+        <div class="header-image">
+            <img src="<%= arr.url %> " alt="Oops">
+        </div>
+        <div class="title">
+            <h3><%= arr.title %> </h3>
+        </div>
+        <div class="content">
+            <img src="<%= arr.thumbnailUrl %> " alt="">
+            <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam iusto eligendi voluptatibus facere
+                impedit quod!</p>
+        </div>
+    </div>
+    <script src="/javascripts/card.js"></script>
+
+</body>
+
+</html>

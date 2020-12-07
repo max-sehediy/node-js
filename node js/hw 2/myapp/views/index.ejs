@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <%- include("partials/menu.ejs") %>
+  <h1><%= title %></h1>
+  <h3>My name <%= name %></h3>
+
+  <p>Welcome to <%= appName %></p>
+
+  <% if(color) {%>
+
+  <%for(let i=0;i<arr.length;i++) {%>
+  <h6><%=arr[i]%></h6>
+  <%}%>
+
+  <% }else{%>
+  
+    <p>No colors</p>
+
+  <%}%>
+</body>
+
+</html>
